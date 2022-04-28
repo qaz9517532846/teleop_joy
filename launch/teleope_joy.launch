@@ -13,6 +13,6 @@
     <param name = "axis_angular"  value = "3" type = "int"/>
     <param name = "scale_linear"  value = "2" type = "double"/>
     <param name = "scale_angular" value = "2" type = "double"/>
-    <param name = "onmi_wheel"    value = "true" type = "bool"/>
+    <param name = "onmi_wheel"    value = "false" type = "bool"/>
   </node>
 </launch>
