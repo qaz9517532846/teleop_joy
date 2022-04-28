@@ -5,7 +5,7 @@ How to control robot using a joystick.
 
 ## Built with
 
-- ROS Noetic under Ubuntu 20.04 LTS
+- ROS Foxy under Ubuntu 20.04 LTS
 
 ------
 
@@ -13,7 +13,7 @@ How to control robot using a joystick.
 
 ### Installation
 
-``` $ sudo apt-get install ros-noetic-joy```
+``` $ sudo apt-get install ros-foxy-joy```
     
 ------
 
@@ -27,7 +27,7 @@ $ sudo chmod a+rw /dev/input/js0
 ```
 
 ``` bash
-$ roslaunch teleop_joy teleop_joy.launch
+$ ros2 launch teleop_joy teleop_joy.launch.py
 ```
 
 ------
