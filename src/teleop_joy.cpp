@@ -32,9 +32,14 @@ void teleop_joy::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
     twist.linear.y = onmi_ ? l_scale_ * joy->axes[linear_y_] : 0;
     twist.angular.z = a_scale_ * joy->axes[angular_];
 
-    joy_priority.data = joy->buttons[joy_relay_] ? !joy_priority_ : joy_priority_;
+    if(joy->buttons[joy_relay_])
+    {
+        joy_priority_ = false;
+        joy_priority.data = joy_priority_;
+        joy_priority_pub_.publish(joy_priority);
+    }
+
     vel_pub_.publish(twist);
-    joy_priority_pub_.publish(joy_priority);
 }
 
 
